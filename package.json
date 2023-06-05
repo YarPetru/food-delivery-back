@@ -1,13 +1,15 @@
 {
-  "name": "superheroes-back",
+  "name": "food-delivery-back",
   "version": "1.0.0",
   "main": "app.js",
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=production node ./server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js"
   },
-  "repository": "https://github.com/YarPetru/superheroes-back.git",
+  "repository": "https://github.com/YarPetru/food-delivery-back.git",
   "author": "Yaroslav Petrukhin <yar.petrukhin@gmail.com>",
   "license": "MIT",
   "dependencies": {
