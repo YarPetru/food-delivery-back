@@ -1,28 +1,26 @@
 const { Schema, model } = require('mongoose');
 const { handleMongooseError } = require('../helpers');
 
+const userDataSchema = new Schema({
+  name: String,
+  email: String,
+  phone: String,
+  address: String,
+});
+
+const orderDataSchema = new Schema({
+  shop_title: String,
+  product: String,
+  price: Number,
+  description: String,
+  image: String,
+  quantity: Number,
+});
+
 const orderSchema = new Schema(
   {
-    user_data: {
-      type: String,
-      required: true,
-    },
-    products_list: {
-      type: Array,
-      required: true,
-    },
-    // price: {
-    //   type: Number,
-    //   required: true,
-    // },
-    // image: {
-    //   type: String,
-    //   required: true,
-    // },
-    // description: {
-    //   type: String,
-    //   required: true,
-    // },
+    user: userDataSchema,
+    order: [orderDataSchema],
   },
   {
     versionKey: false,

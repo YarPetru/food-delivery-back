@@ -5,5 +5,5 @@ const { ctrlWrapper } = require('../../helpers');
 
 module.exports = {
   getAll: ctrlWrapper(getAll),
-  createHero: ctrlWrapper(createOrder),
+  createOrder: ctrlWrapper(createOrder),
 };
