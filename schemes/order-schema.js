@@ -14,7 +14,7 @@ const orderDataSchema = Joi.object({
   price: Joi.number().required(),
   description: Joi.string().required(),
   image: Joi.string().required(),
-  quantity: Joi.string().required(),
+  quantity: Joi.number().required(),
 });
 
 const orderSchema = Joi.object({
