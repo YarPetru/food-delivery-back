@@ -9,9 +9,7 @@ mongoose
   .connect(DB_HOST)
   .then(() => {
     console.log('DB connect success');
-    app.listen(PORT, () =>
-      console.log(`Server is running... . Use Superheroes API on port ${PORT}`)
-    );
+    app.listen(PORT, () => console.log(`Server is running... . Use API on port ${PORT}`));
   })
   .catch(error => {
     console.log(error.message);
